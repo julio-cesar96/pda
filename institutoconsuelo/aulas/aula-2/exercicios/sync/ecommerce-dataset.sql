@@ -1,3 +1,4 @@
+-- Tabela de Clientes
 CREATE TABLE Clientes (
     ClienteID SERIAL PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
@@ -71,4 +72,3 @@ FROM Clientes c
 JOIN Pedidos p ON c.ClienteID = p.ClienteID
 JOIN ItensPedido i ON p.PedidoID = i.PedidoID
 JOIN Produtos pr ON i.ProdutoID = pr.ProdutoID;
-```

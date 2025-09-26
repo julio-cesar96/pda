@@ -1,3 +1,4 @@
+-- Tabela de Clientez
 CREATE TABLE Clientes (
     ClienteID SERIAL PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,

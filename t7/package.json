@@ -1,0 +1,16 @@
+{
+  "name": "t7",
+  "version": "1.0.0",
+  "description": "Este diretório contém todos os **materiais, conteúdos e recursos** utilizados nos cursos ministrados para o **T7** da formação FullStack da PdA.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "zod": "^4.1.11"
+  }
+}

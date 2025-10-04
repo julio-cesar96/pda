@@ -397,10 +397,21 @@ Atenção! Os critérios abaixo são **ELIMINATÓRIOS** e resultam em projeto in
 - ❌ **Sistema SQL não executa/tem erros graves**
 - ❌ **Não apresentou o projeto**
 - ❌ **Não publicou no LinkedIn e GitHub**
+- ❌ Não adicionou o professor como colaborador no repositório
+- ❌ Não abriu Pull Request para avaliação
 
 ---
 
 ## Dicas Importantes 💡
+
+### Para o Git/GitHub:
+
+- Crie o repositório desde o início do projeto
+- Faça commits frequentes com mensagens descritivas, sugiro que use o [conventional commits](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/)
+- Use branch develop para desenvolvimento
+- Ao finalizar, abra PR de develop → main
+- Adicione o professor como colaborador: julio-cesar96
+- No PR, [descreva](https://www.hackerone.com/blog/writing-great-pull-request-description) o que foi implementado e desafios encontrados
 
 ### Para o SQL:
 

@@ -11,7 +11,7 @@
 
 ## 1. Estrutura de Scripts e Boas Práticas (30 min)
 
-### 📖 Definições Fundamentais
+### 📖 Definições Fundamentais de Funções, Módulos e Pacotes
 
 **Script Python:** É um arquivo de texto com extensão `.py` que contém código Python e pode ser executado diretamente pelo interpretador. Diferente do C que precisa de compilação, o Python é interpretado em tempo de execução.
 
@@ -26,6 +26,7 @@
 ### 🔄 C vs Python: Primeira impressão
 
 **Em C:**
+
 ```c
 #include <stdio.h>
 
@@ -36,6 +37,7 @@ int main() {
 ```
 
 **Em Python (modo pythônico):**
+
 ```python
 def main():
     print("Hello, World!")
@@ -47,13 +49,16 @@ if __name__ == "__main__":
 ### 🐍 Características Pythônicas
 
 #### **O que é "Pythônico"?**
+
 Código pythônico segue as filosofias e convenções da linguagem Python, priorizando:
+
 - **Legibilidade:** "Code is read much more often than it is written"
 - **Simplicidade:** "Simple is better than complex"
 - **Explícito:** "Explicit is better than implicit"
 - **Elegância:** "Beautiful is better than ugly"
 
 #### 1. **Indentação é obrigatória**
+
 - **C:** Usa `{}` para delimitar blocos
 - **Python:** Usa indentação (4 espaços recomendados)
 
@@ -70,6 +75,7 @@ print("Erro de indentação")
 ```
 
 #### 2. **Sem ponto e vírgula**
+
 ```python
 # Python
 nome = "João"
@@ -87,6 +93,7 @@ print(f"{nome} tem {idade} anos")
 **PEP 8** é o guia de estilo oficial do Python que define como escrever código legível e consistente.
 
 ##### **📝 Convenções de Nomenclatura:**
+
 ```python
 # Variáveis e funções: snake_case (minúsculas com underscore)
 nome_usuario = "maria"
@@ -121,6 +128,7 @@ class MinhaClasse:
 ```
 
 ##### **📏 Formatação e Espaçamento:**
+
 ```python
 # CORRETO ✅ - Espaços ao redor de operadores
 resultado = (a + b) * (c - d)
@@ -146,6 +154,7 @@ funcao(arg1,arg2,param3= valor)
 ```
 
 ##### **📄 Comprimento de Linha e Quebras:**
+
 ```python
 # Máximo 79 caracteres por linha
 # CORRETO ✅ - Quebra de linha em parênteses
@@ -168,6 +177,7 @@ if (condicao1 and condicao2 and
 ```
 
 ##### **📦 Imports (Importações):**
+
 ```python
 # CORRETO ✅ - Ordem dos imports
 # 1. Biblioteca padrão
@@ -192,6 +202,7 @@ from os import *  # Não recomendado
 ```
 
 ##### **🔤 Strings e Comentários:**
+
 ```python
 # CORRETO ✅ - Docstrings em funções
 def calcular_area_triangulo(base, altura):
@@ -217,6 +228,7 @@ mensagem = "Ele disse: 'Olá!'"  # Use duplas quando tiver aspas simples dentro
 ```
 
 ##### **🏗️ Estrutura de Classes:**
+
 ```python
 class ExemploPEP8:
     """Classe que demonstra convenções PEP 8."""
@@ -250,6 +262,7 @@ class ExemploPEP8:
 ```
 
 ##### **⚠️ Principais Regras PEP 8:**
+
 1. **Indentação:** 4 espaços (nunca tabs)
 2. **Linha:** Máximo 79 caracteres
 3. **Linhas em branco:** 2 linhas entre classes, 1 linha entre métodos
@@ -259,6 +272,7 @@ class ExemploPEP8:
 7. **Comentários:** Em inglês (projetos internacionais) ou idioma do projeto
 
 #### 4. **O padrão `if __name__ == "__main__":`**
+
 ```python
 def saudacao(nome):
     """Função para cumprimentar"""
@@ -276,7 +290,9 @@ if __name__ == "__main__":
 ```
 
 ### 🎯 **ATIVIDADE EM SALA #1** (10 min)
+
 Crie um script `calculadora_basica.py` que:
+
 - Tenha funções para soma, subtração, multiplicação e divisão
 - Use o padrão `if __name__ == "__main__":`
 - Peça dois números ao usuário e mostre todas as operações
@@ -285,17 +301,19 @@ Crie um script `calculadora_basica.py` que:
 
 ## 2. Variáveis, Operadores, Condicionais e Loops (45 min)
 
-### 📖 Definições Fundamentais
+### 📖 Definições Fundamentais de Funções, Módulos e Pacotes (Revisão)
 
 **Tipagem Dinâmica:** O tipo da variável é determinado em tempo de execução, não na declaração. Uma mesma variável pode armazenar diferentes tipos durante a execução do programa.
 
 **Duck Typing:** Conceito Python: "Se anda como um pato e grasna como um pato, então é um pato". O tipo é determinado pelo comportamento, não pela declaração explícita.
 
-**Mutabilidade:** 
+**Mutabilidade:**
+
 - **Objetos Mutáveis:** Podem ser alterados após criação (listas, dicionários, sets)
 - **Objetos Imutáveis:** Não podem ser alterados após criação (strings, tuplas, números)
 
 **Operadores de Identidade:**
+
 - `is`: Verifica se duas variáveis referenciam o mesmo objeto
 - `==`: Verifica se dois objetos têm o mesmo valor
 
@@ -306,6 +324,7 @@ Crie um script `calculadora_basica.py` que:
 ### 🔄 Tipagem: C vs Python
 
 **C (tipagem estática):**
+
 ```c
 int numero = 42;
 float preco = 19.99;
@@ -313,6 +332,7 @@ char letra = 'A';
 ```
 
 **Python (tipagem dinâmica - pythônico):**
+
 ```python
 numero = 42          # int
 preco = 19.99        # float
@@ -339,6 +359,7 @@ Python prioriza a legibilidade, usando palavras em inglês que são mais intuiti
 | `!` | `not` | `if not aprovado:` | NÃO lógico |
 
 **Operadores de Comparação:**
+
 - `==` : Igual (valor)
 - `!=` : Diferente  
 - `is` : Identidade (mesmo objeto)
@@ -360,6 +381,7 @@ if 3 in lista:  # Verifica se 3 está na lista
 ### 🔄 Estruturas de Controle
 
 #### **Condicionais**
+
 ```python
 # Python - mais limpo e legível
 idade = 20
@@ -380,6 +402,7 @@ status = "maior" if idade >= 18 else "menor"
 #### **Loops - A grande diferença!**
 
 **C:**
+
 ```c
 // Loop tradicional
 for(int i = 0; i < 5; i++) {
@@ -388,6 +411,7 @@ for(int i = 0; i < 5; i++) {
 ```
 
 **Python (modo pythônico):**
+
 ```python
 # Pythônico com range()
 for i in range(5):
@@ -410,6 +434,7 @@ Uma forma concisa e eficiente de criar listas baseadas em listas existentes. Seg
 `[expressão for item in iterável if condição]`
 
 **Vantagens:**
+
 - Mais rápido que loops tradicionais
 - Mais legível para operações simples
 - Menos código
@@ -433,7 +458,9 @@ grandes = [palavra for palavra in palavras if len(palavra) > 3]
 ```
 
 ### 🎯 **ATIVIDADE EM SALA #2** (15 min)
+
 Crie um programa que:
+
 1. Gere uma lista com os números de 1 a 50
 2. Use list comprehension para filtrar apenas os múltiplos de 3 e 5
 3. Calcule a soma desses números
@@ -443,16 +470,18 @@ Crie um programa que:
 
 ## 3. Funções, Módulos e Pacotes (45 min)
 
-### 📖 Definições Fundamentais
+### 📖 Definições Fundamentais de Manipulação de Arquivos e Dados
 
 **Função:** Bloco de código reutilizável que executa uma tarefa específica. Em Python, funções são objetos de primeira classe (podem ser passadas como argumentos, retornadas de outras funções, atribuídas a variáveis).
 
 **Escopo:** Define onde uma variável pode ser acessada:
+
 - **Local:** Dentro da função onde foi definida
 - **Global:** No nível do módulo
 - **Built-in:** Nomes pré-definidos do Python
 
 **Parâmetro vs Argumento:**
+
 - **Parâmetro:** Variável na definição da função
 - **Argumento:** Valor real passado quando a função é chamada
 
@@ -471,6 +500,7 @@ Crie um programa que:
 ### 🔄 Funções: C vs Python
 
 **C:**
+
 ```c
 int soma(int a, int b) {
     return a + b;
@@ -478,6 +508,7 @@ int soma(int a, int b) {
 ```
 
 **Python (mais flexível):**
+
 ```python
 def soma(a, b):
     """Retorna a soma de dois números"""
@@ -492,6 +523,7 @@ def soma_tipada(a: int, b: int) -> int:
 ### 🐍 Recursos Pythônicos em Funções
 
 #### **1. Parâmetros com valores padrão**
+
 ```python
 def saudacao(nome, cumprimento="Olá"):
     return f"{cumprimento}, {nome}!"
@@ -501,6 +533,7 @@ print(saudacao("João", "Oi"))      # Oi, João!
 ```
 
 #### **2. Argumentos nomeados**
+
 ```python
 def criar_perfil(nome, idade, cidade="Não informada", ativo=True):
     return {
@@ -516,6 +549,7 @@ perfil2 = criar_perfil(nome="Pedro", cidade="São Paulo", idade=30)
 ```
 
 #### **3. *args e **kwargs (muito pythônico!)**
+
 ```python
 def soma_flexivel(*numeros):
     """Soma qualquer quantidade de números"""
@@ -532,6 +566,7 @@ info_pessoa(nome="João", idade=25, profissao="Dev")
 ```
 
 #### **4. Retorno múltiplo (pythônico!)**
+
 ```python
 def operacoes_basicas(a, b):
     """Retorna múltiplos valores"""
@@ -546,7 +581,8 @@ print(f"Soma: {soma}, Subtração: {sub}")
 
 #### **Criando um módulo**
 
-**arquivo: matematica.py**
+#### arquivo: `matematica.py`
+
 ```python
 """
 Módulo com funções matemáticas básicas
@@ -575,6 +611,7 @@ def eh_primo(numero):
 ```
 
 #### **Importando de forma pythônica**
+
 ```python
 # Diferentes formas de importar
 import matematica
@@ -593,7 +630,8 @@ from matematica import *
 ```
 
 ### 📁 Estrutura de Pacotes
-```
+
+```source
 meu_projeto/
 ├── main.py
 ├── utils/
@@ -603,6 +641,169 @@ meu_projeto/
 └── modelos/
     ├── __init__.py
     └── usuario.py
+```
+
+### 📦 Gerenciamento de Pacotes e Ambientes Virtuais
+
+#### **O que é o pip?**
+
+**pip** (Pip Installs Packages) é o gerenciador de pacotes padrão do Python. Permite instalar, atualizar e remover bibliotecas de terceiros do PyPI (Python Package Index).
+
+#### **Instalando Pacotes com pip**
+
+```bash
+# Instalar um pacote
+pip install requests
+
+# Instalar versão específica
+pip install requests==2.28.0
+
+# Instalar múltiplos pacotes
+pip install requests numpy pandas
+
+# Atualizar um pacote
+pip install --upgrade requests
+
+# Desinstalar um pacote
+pip uninstall requests
+
+# Listar pacotes instalados
+pip list
+
+# Mostrar informações de um pacote
+pip show requests
+
+# Buscar pacotes
+pip search "web scraping"
+```
+
+#### **Por que usar Ambientes Virtuais?**
+
+**Problema em C:** Bibliotecas instaladas globalmente no sistema podem causar conflitos.
+
+**Solução Python:** Ambientes virtuais isolam dependências de cada projeto.
+
+**Benefícios:**
+
+- Cada projeto tem suas próprias dependências
+- Evita conflitos entre versões
+- Facilita compartilhamento do projeto
+- Mantém o sistema limpo
+
+#### **Criando e Usando Ambientes Virtuais**
+
+##### **Com venv (Built-in do Python):**
+
+```bash
+# Criar ambiente virtual
+python -m venv meu_ambiente
+
+# Ativar ambiente virtual
+# Windows:
+meu_ambiente\Scripts\activate
+
+# Linux/Mac:
+source meu_ambiente/bin/activate
+
+# Seu terminal mostrará: (meu_ambiente) user@computer:~$
+
+# Instalar pacotes no ambiente
+pip install requests pandas
+
+# Desativar ambiente virtual
+deactivate
+```
+
+##### **Arquivo requirements.txt:**
+
+```bash
+# Salvar dependências do projeto
+pip freeze > requirements.txt
+
+# Conteúdo do requirements.txt:
+# requests==2.28.0
+# pandas==1.5.0
+# numpy==1.23.0
+
+# Instalar todas as dependências de um projeto
+pip install -r requirements.txt
+```
+
+#### **Exemplo Prático Completo:**
+
+```bash
+# 1. Criar projeto
+mkdir meu_projeto
+cd meu_projeto
+
+# 2. Criar ambiente virtual
+python -m venv venv
+
+# 3. Ativar ambiente
+source venv/bin/activate  # Linux/Mac
+# ou
+venv\Scripts\activate  # Windows
+
+# 4. Instalar dependências
+pip install requests pandas matplotlib
+
+# 5. Salvar dependências
+pip freeze > requirements.txt
+
+# 6. Criar estrutura do projeto
+mkdir src
+touch src/main.py
+touch src/__init__.py
+
+# 7. Quando terminar
+deactivate
+```
+
+#### **Boas Práticas:**
+
+```python
+# ✅ SEMPRE use ambientes virtuais
+# ✅ Inclua requirements.txt no projeto
+# ✅ Adicione venv/ ao .gitignore
+# ✅ Documente as dependências no README
+
+# Estrutura recomendada:
+"""
+meu_projeto/
+├── venv/                 # Ambiente virtual (não commitar)
+├── src/                  # Código fonte
+│   ├── __init__.py
+│   └── main.py
+├── tests/                # Testes
+├── requirements.txt      # Dependências
+├── README.md            # Documentação
+└── .gitignore           # Ignorar venv/
+"""
+```
+
+#### **Pacotes Essenciais para Começar:**
+
+```bash
+# Manipulação de dados
+pip install pandas numpy
+
+# Requisições HTTP
+pip install requests
+
+# Análise de dados e gráficos
+pip install matplotlib seaborn
+
+# Desenvolvimento web
+pip install flask django
+
+# Testes
+pip install pytest
+
+# Formatação de código
+pip install black flake8 pylint
+
+# Ambiente de dados
+pip install jupyter notebook
 ```
 
 ---
@@ -622,22 +823,26 @@ meu_projeto/
 **API (Application Programming Interface):** Conjunto de protocolos e ferramentas para construir software. APIs web permitem comunicação entre aplicações via HTTP.
 
 **HTTP Methods:**
+
 - **GET:** Recupera dados do servidor
 - **POST:** Envia dados para o servidor
 - **PUT:** Atualiza dados existentes
 - **DELETE:** Remove dados
 
-**Request/Response:** 
+**Request/Response:**
+
 - **Request:** Solicitação feita ao servidor (contém método, URL, headers, body)
 - **Response:** Resposta do servidor (contém status code, headers, body)
 
 **Status Codes HTTP:**
+
 - **200:** Sucesso
 - **400:** Erro do cliente (bad request)
 - **404:** Não encontrado
 - **500:** Erro interno do servidor
 
 **Serialização/Deserialização:**
+
 - **Serialização:** Converter objeto Python em formato de armazenamento (JSON, XML)
 - **Deserialização:** Converter dados armazenados de volta em objeto Python
 
@@ -646,6 +851,7 @@ meu_projeto/
 ### 📄 Manipulação de Arquivos
 
 #### **Context Manager (pythônico!)**
+
 ```python
 # Não pythônico (como em C)
 arquivo = open("dados.txt", "w")
@@ -659,6 +865,7 @@ with open("dados.txt", "w", encoding="utf-8") as arquivo:
 ```
 
 #### **Lendo arquivos**
+
 ```python
 # Ler arquivo completo
 with open("dados.txt", "r", encoding="utf-8") as arquivo:
@@ -838,81 +1045,44 @@ sistema.exportar_csv()
 
 ---
 
-## 🏠 Atividades para Casa
-
-### 📝 **Atividade 1 - SIMPLES**
-Crie um programa que:
-- Leia um arquivo de texto com uma lista de palavras (uma por linha)
-- Conte quantas palavras têm mais de 5 letras
-- Salve o resultado em um arquivo JSON com o formato:
-```json
-{
-    "total_palavras": 100,
-    "palavras_grandes": 45,
-    "porcentagem": 45.0
-}
-```
-
-### 📝 **Atividade 2 - MÉDIA**
-Desenvolva um sistema de notas que:
-- Leia dados de alunos de um CSV (nome, nota1, nota2, nota3)
-- Calcule a média de cada aluno
-- Determine se foi aprovado (média ≥ 7.0)
-- Gere um relatório em JSON com estatísticas da turma:
-  - Quantidade de aprovados/reprovados
-  - Média geral da turma
-  - Maior e menor nota
-- Use funções separadas para cada operação
-
-### 📝 **Atividade 3 - DIFÍCIL**
-Crie um sistema completo de gerenciamento de biblioteca que:
-- Tenha classes para `Livro`, `Usuario` e `Biblioteca`
-- Permita cadastrar livros e usuários
-- Implemente empréstimo e devolução
-- Salve todos os dados em arquivos JSON
-- Tenha funcionalidade para:
-  - Gerar relatório de livros mais emprestados (CSV)
-  - Buscar informações de livros em uma API pública (ex: Open Library)
-  - Importar lista de livros de um CSV
-- Use tratamento de exceções adequado
-- Implemente log de operações em arquivo de texto
-
----
-
 ## 📚 Material Extra de Estudo
 
 ### 🔗 Links Essenciais
-- **Documentação Python:** https://docs.python.org/3/
-- **PEP 8 - Style Guide:** https://peps.python.org/pep-0008/
-- **Real Python:** https://realpython.com/
-- **Python Package Index (PyPI):** https://pypi.org/
+
+- **Documentação Python:** <https://docs.python.org/3/>
+- **PEP 8 - Style Guide:** <https://peps.python.org/pep-0008/>
+- **Real Python:** <https://realpython.com/>
+- **Python Package Index (PyPI):** <https://pypi.org/>
 
 ### 📖 Livros Recomendados
+
 - "Automate the Boring Stuff with Python" - Al Sweigart
 - "Python Tricks" - Dan Bader
 - "Effective Python" - Brett Slatkin
 
 ### 🛠️ Ferramentas Úteis
+
 - **IDE/Editores:** VS Code, PyCharm, Vim
 - **Linters:** pylint, flake8, black
 - **Ambientes virtuais:** venv, conda
-- **APIs para testes:** 
-  - JSONPlaceholder: https://jsonplaceholder.typicode.com/
-  - ViaCEP: https://viacep.com.br/
-  - Open Library: https://openlibrary.org/developers/api
+- **APIs para testes:**
+  - JSONPlaceholder: <https://jsonplaceholder.typicode.com/>
+  - ViaCEP: <https://viacep.com.br/>
+  - Open Library: <https://openlibrary.org/developers/api>
 
 ---
 
 ## 🎯 Resumo da Aula
 
-### O que aprendemos hoje:
+### O que aprendemos hoje
 
 1. **Python vs C:** Sintaxe mais limpa, tipagem dinâmica, indentação obrigatória
 2. **Modo Pythônico:** List comprehensions, context managers, desempacotamento
 3. **Funções flexíveis:** Parâmetros padrão, *args, **kwargs, múltiplos retornos
 4. **Manipulação de dados:** CSV, JSON, APIs de forma eficiente e legível
 
-### Próximos passos:
+### Próximos passos
+
 - Pratique os exercícios propostos
 - Explore as bibliotecas padrão do Python
 - Experimente com APIs públicas

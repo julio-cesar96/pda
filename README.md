@@ -31,7 +31,8 @@ A estrutura pode variar ao longo do tempo, mas a ideia geral é:
 
 Alguns dos principais tópicos que podem aparecer aqui:
 
-- Fundamentos de programação (JavaScript, HTML/CSS, etc.)
+- Fundamentos de programação (Python, JavaScript, HTML/CSS, etc.)
+- Banco de Dados (SQL, PostgreSQL, etc.)
 - Paradigmas de POO: encapsulamento, herança, polimorfismo, abstração
 - Estruturas de dados e algoritmos
 - Boas práticas de desenvolvimento

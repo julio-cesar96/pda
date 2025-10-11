@@ -1,4 +1,4 @@
-# 📚 Materiais de Facilitação – Programadores do Amanhã
+# 📚 Materiais de Facilitação – Programadores do Amanhã s
 
 Este repositório reúne os **conteúdos, exemplos e materiais** que utilizo como facilitador na ONG **Programadores do Amanhã (PDA)**.  
 O objetivo é manter a organização dos recursos, centralizar referências e facilitar tanto a preparação das aulas quanto o compartilhamento de conhecimento.

@@ -900,6 +900,9 @@ jobs:
 - **Python Testing with pytest (Playlist):**
   https://www.youtube.com/playlist?list=PLOLrQ9Pn6caxigVJw2jHcQYdkppIuyj6R
 
+- **Qual tipo de teste vale mais a pena?**
+  https://www.youtube.com/watch?v=lg6DagRbTnU
+
 - **Git e GitHub para Iniciantes:**
   https://www.youtube.com/watch?v=UBAX-13g8OM
 

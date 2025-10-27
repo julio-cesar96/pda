@@ -1,11 +1,5 @@
 # 🌐 Front Descomplicado: HTML & CSS
 
-**Duração:** 3 horas  
-**Nível:** Iniciante a intermediário  
-**Pré-requisitos:** Lógica de programação básica, familiaridade com editores de código
-
----
-
 ## 🧠 Objetivos de Aprendizagem
 
 Ao final desta aula, você será capaz de:

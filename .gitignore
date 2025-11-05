@@ -1,0 +1,83 @@
+# Arquivos do Professor (não devem ser visíveis para alunos)
+RESUMO-PROFESSOR.md
+**/RESUMO-PROFESSOR.md
+
+# Arquivos de notas e avaliações
+notas.md
+avaliacoes.md
+rubrica-preenchida.md
+**/notas/**
+**/avaliacoes/**
+
+# Arquivos temporários do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Dependências Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Dependências Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Bancos de dados locais
+*.db
+*.sqlite
+*.sqlite3
+
+# Arquivos de backup
+*.bak
+*.backup
+*~
+
+# Arquivos pessoais
+NOTAS-PESSOAIS.md
+TODO-PROFESSOR.md

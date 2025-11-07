@@ -1,0 +1,15 @@
+RESUMO PARA PROMPT (300 caracteres):
+
+Webinar "Do Freela ao Fixo" (2h): Capacita devs a gerarem renda como freelancers enquanto buscam CLT. Cobre mentalidade de negócio, construção de portfólio real, prospecção estratégica, precificação por timesheet, gestão de projetos e cases práticos. Foco em tooling/automação para resultados rápidos.
+
+---
+
+VERSÃO ALTERNATIVA (mais curta - 250 caracteres):
+
+Webinar 2h para devs: freelancing como estratégia de renda e portfólio. Mentalidade, prospecção, precificação/hora, projetos rápidos (landing pages, automações). Do freela ao CLT com portfólio real, networking e habilidades de negócio.
+
+---
+
+VERSÃO ULTRA-RESUMIDA (150 caracteres):
+
+Webinar 2h: dev freelancer para renda extra + portfólio real. Prospecção, precificação, projetos rápidos. Acelera entrada no mercado CLT.

@@ -920,6 +920,7 @@ backend/
 - SweetAlert2 (modals bonitos)
 - Toastify (notificações)
 - FontAwesome (ícones)
+- Zod (validação)
 
 #### Estrutura de Pastas Obrigatória
 

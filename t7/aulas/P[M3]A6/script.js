@@ -1,38 +1,51 @@
-// Selecionando dos elementos da DOM
+// Seleção de elementos
 const formPost = document.getElementById('formPost');
 const inputTitulo = document.getElementById('titulo');
 const inputConteudo = document.getElementById('conteudo');
-const btnCarregarPosts = document.getElementById('btnCarregar');
+const btnCarregar = document.getElementById('btnCarregar');
+const listaPosts = document.getElementById('listaPosts');
 
+// Evento: Carregar postagens
+btnCarregar.addEventListener('click', carregarPostagens);
 
-//Evento - elemento.addEventListener('evento', funcao);
-
-formPost.addEventListener('submit', (event) => {
-    event.preventDefault(); // Evita o comportamento padrão do formulário
-    console.log('Formulário enviado!');
-
-    const titutlo = inputTitulo.value;
+// Evento: Enviar formulário
+formPost.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+    
+    const titulo = inputTitulo.value;
     const conteudo = inputConteudo.value;
-
-    if (titutlo.trim() === '' || conteudo.trim() === '') {
-        alert('Por favor, preencha todos os campos.');
+    
+    if (titulo.trim() === '' || conteudo.trim() === '') {
+        alert('Preencha todos os campos!');
         return;
     }
-
-    criarPost(titutlo, conteudo);
     
-    // Limpar os campos do formulário
-    inputTitulo.value = '';
-    inputConteudo.value = '';
+    criarPostagem(titulo, conteudo);
 });
 
-btnCarregarPosts.addEventListener('click', () => {
-    carregarPosts();
-});
+// GET - Carregar postagens
+async function carregarPostagens() {
+    listaPosts.innerHTML = '<p class="loading">Carregando postagens...</p>';
+    
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
+        const posts = await response.json();
+        
+        listaPosts.innerHTML = '';
+        
+        posts.forEach(post => {
+            const postElement = criarElementoPost(post);
+            listaPosts.appendChild(postElement);
+        });
+        
+    } catch (error) {
+        listaPosts.innerHTML = '<p style="color: red;">Erro ao carregar postagens!</p>';
+        console.error('Erro:', error);
+    }
+}
 
-
-//Chamadas a API
-async function criarPost(titulo, conteudo) {
+// POST - Criar postagem
+async function criarPostagem(titulo, conteudo) {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
@@ -45,27 +58,28 @@ async function criarPost(titulo, conteudo) {
                 userId: 1
             })
         });
-
-        const data = await response.json();
-        console.log('Post criado com sucesso:', data);
-        alert('Post criado com sucesso! ID: ' + data.id);
+        
+        const novoPost = await response.json();
+        
+        alert('Postagem criada com sucesso! ID: ' + novoPost.id);
         formPost.reset();
-
+        
+        const postElement = criarElementoPost(novoPost);
+        listaPosts.insertBefore(postElement, listaPosts.firstChild);
+        
     } catch (error) {
-        console.error('Erro ao criar o post:', error);
-        alert('Erro ao criar o post. Tente novamente mais tarde.');
+        alert('Erro ao criar postagem!');
+        console.error('Erro:', error);
     }
 }
 
-async function carregarPosts() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-        const posts = await response.json();
-        console.log('Posts carregados:', posts);
-    } catch (error) {
-        console.error('Erro ao carregar os posts:', error);
-        alert('Erro ao carregar os posts. Tente novamente mais tarde.');
-    }
+// Função auxiliar
+function criarElementoPost(post) {
+    const div = document.createElement('div');
+    div.className = 'post-item';
+    div.innerHTML = `
+        <h3>${post.title}</h3>
+        <p>${post.body}</p>
+    `;
+    return div;
 }
-
- 

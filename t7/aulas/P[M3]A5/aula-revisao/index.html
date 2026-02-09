@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Filmes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎬 Minha Lista de Filmes</h1>
+      <p class="subtitle">Organize seus filmes favoritos</p>
+    </header>
+
+    <!-- Formulário de adição -->
+    <form id="movieForm" class="movie-form">
+      <div class="form-group">
+        <label for="titulo">Título do Filme</label>
+        <input 
+          type="text" 
+          id="titulo" 
+          placeholder="Ex: O Poderoso Chefão"
+          required
+        >
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ano">Ano de Lançamento</label>
+          <input 
+            type="number" 
+            id="ano" 
+            min="1900" 
+            max="2030"
+            placeholder="2024"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="genero">Gênero</label>
+          <select id="genero" required>
+            <option value="">Selecione...</option>
+            <option value="Ação">Ação</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Drama">Drama</option>
+            <option value="Terror">Terror</option>
+            <option value="Ficção">Ficção Científica</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="avaliacao">
+          Avaliação: <span id="avaliacaoValor">3</span> estrelas
+        </label>
+        <input 
+          type="range" 
+          id="avaliacao" 
+          min="1" 
+          max="5" 
+          value="3"
+        >
+      </div>
+
+      <button type="submit" class="btn-submit">
+        ➕ Adicionar Filme
+      </button>
+    </form>
+
+    <!-- Contador de filmes -->
+    <div class="movie-stats">
+      <p>Total de filmes: <span id="movieCount">0</span></p>
+    </div>
+
+    <!-- Lista de filmes -->
+    <div id="movieList" class="movie-list">
+      <!-- Os cards serão inseridos aqui -->
+    </div>
+  </div>
+
+  <!-- Importar o módulo principal -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

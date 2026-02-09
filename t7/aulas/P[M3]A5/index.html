@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão - Eventos e DOM</title>
     <link rel="stylesheet" href="css/index.css">
-    <title>Criando elementos de forma dinâmica com JS</title>
 </head>
 <body>
-    
-    
-    <script type="module" src="script.js"></script>
+    <div class="container">
+        <h1>Sistema de Postagens</h1>
+        
+        <!-- Formulário de Nova Postagem -->
+        <section class="form-section">
+            <h2>Criar Nova Postagem</h2>
+            <form id="formPost">
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="conteudo">Conteúdo:</label>
+                    <textarea id="conteudo" name="conteudo" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Publicar</button>
+            </form>
+        </section>
+
+        <!-- Área de Visualização -->
+        <section class="posts-section">
+            <h2>Postagens Recentes</h2>
+            <button id="btnCarregar" class="btn-secondary">Carregar Postagens</button>
+            <div id="listaPosts"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

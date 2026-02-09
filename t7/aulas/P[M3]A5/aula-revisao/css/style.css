@@ -246,3 +246,10 @@ input[type="range"] {
     font-size: 1.3rem;
   }
 }
+
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}

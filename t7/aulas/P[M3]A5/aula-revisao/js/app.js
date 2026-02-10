@@ -4,7 +4,7 @@
 
 import { criarCardFilme, criarEstadoVazio } from "./movieCard.js";
 
-const movieForm = document.getElementById('movie-form');
+const movieForm = document.getElementById('movieForm');
 const titleInput = document.getElementById('titulo');
 const anoInput = document.getElementById('ano');
 const generoSelect = document.getElementById('genero');
@@ -118,7 +118,7 @@ function handleRemoveFilme () {
     totalDeFilmes--;
     atualizarContador();
 
-    if (totalDeFimes === 0) {
+    if (totalDeFilmes === 0) {
         exibirEstadoVazio();
     }
 
@@ -130,7 +130,7 @@ function handleRemoveFilme () {
  */
 
 function atualizarContador () {
-    movieCount.textContent = `Total de filmes: ${totalDeFilmes}`;
+    movieCount.textContent = `${totalDeFilmes}`;
 }
 
 /**

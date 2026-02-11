@@ -1,0 +1,229 @@
+/* ========================================
+   RESET E ESTILOS GLOBAIS
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container centralizado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+
+    /* Fixar no topo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000; /* Garantir que fique acima de outros elementos */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /*/ Sombra para destacar o header */ 
+}
+
+/* ========================================
+   NAVBAR COM FLEXBOX
+   ======================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    min-height: 70px;
+}
+
+/* ========================================
+   LOGO
+   ======================================== */
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* ========================================
+   MENU DE NAVEGAÇÃO (Horizontal no Desktop)
+   ======================================== */
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar-menu .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efeito underline animado */
+.nav-item .nav-link::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 0;
+   height: 2px;
+   background-color: #ffd700;
+   transition: width 0.3s ease;
+}
+
+.nav-item .nav-link:hover::after {
+   width: 100%;
+}
+
+/* ========================================
+   BOTÃO HAMBURGUER (Escondido no Desktop)
+   ======================================== */
+
+.navbar-toggler {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Garantir que fique acima do header */
+}
+
+.navbar-toggler .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Focus para acessibilidade via teclado */
+.navbar-toggler:focus {
+    outline: 2p solid #ffd700;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   MOBILE: até 768px
+   ======================================== */
+
+@media (max-width: 768px) {
+      /* ========== MOSTRAR BOTÃO HAMBURGUER ========== */
+    .navbar-toggler {
+        display: flex;
+    }
+
+    /* ========== MENU MOBILE VERTICAL ========== */
+    .navbar-menu {
+        /* Posicionamento fixo cobrir toda a tela*/
+        position: fixed;
+        top: 70px; /* Abaixo do header */
+        left: -100%; /* Escondido à esquerda */
+        width: 100%;
+        height: calc(100vh - 70px); /* Altura total da tela menos o header */
+
+        /* Estilo do menu */
+        background-color: #333;
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: stretch;
+        padding: 2rem 0;
+        gap: 0;
+
+        /* Animação suave de deslizar */
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+        /* Permite scroll se o menu for muito longo */
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+        /* Sombra quando aberto */
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+          /* ========== MENU ATIVO (VISÍVEL) ========== */
+        .navbar-menu.active {
+            left: 0; /* Desliza para dentro da tela */
+        }
+    
+    /* ========== ITENS DO MENU OCUPAM LARGURA TOTAL ========== */
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-item .nav-link {
+        padding: 1.25rem 2rem;
+        font-size: 1.125rem;
+    }
+    
+    /* Remove o efeito underline no mobile */
+    .nav-item .nav-link::after {
+        display: none;
+    }
+    
+    /* ========== ANIMAÇÃO HAMBURGUER → X ========== */
+    
+    /* Quando o botão está ativo (menu aberto) */
+    .navbar-toggler.active .bar:nth-child(1) {
+        /* Barra superior: rotaciona e move para formar o X */
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .navbar-toggler.active .bar:nth-child(2) {
+        /* Barra do meio: desaparece */
+        opacity: 0;
+    }
+    
+    .navbar-toggler.active .bar:nth-child(3) {
+        /* Barra inferior: rotaciona e move para formar o X */
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* ========== OVERLAY ESCURO (OPCIONAL) ========== */
+    /* Adiciona um overlay escuro sobre o conteúdo quando menu abre */
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}

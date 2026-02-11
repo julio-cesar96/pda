@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Responsivo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========================================
+       HEADER FIXO COM NAVEGAÇÃO RESPONSIVA
+       ======================================== -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        
+        <!-- LOGO -->
+        <div class="navbar-brand">
+          <a href="#" class="logo" aria-label="Página inicial">
+            MeuSite
+          </a>
+        </div>
+        
+        <!-- BOTÃO HAMBURGUER (visível apenas no mobile) -->
+        <button 
+          class="navbar-toggler" 
+          type="button"
+          aria-label="Abrir menu de navegação" 
+          aria-expanded="false"
+          aria-controls="navbar-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        
+        <!-- MENU DE NAVEGAÇÃO -->
+        <ul class="navbar-menu" id="navbar-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#sobre" class="nav-link">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a href="#servicos" class="nav-link">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Portfólio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contato" class="nav-link">Contato</a>
+          </li>
+        </ul>
+        
+      </nav>
+    </div>
+  </header>
+  
+  <!-- CONTEÚDO DA PÁGINA -->
+  <main style="margin-top: 70px; /* Compensa header fixo */">
+    <h1>Conteúdo da Página</h1>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

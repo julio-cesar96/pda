@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #ffd700;
+}
+
+
 /* ========================================
    RESET E ESTILOS GLOBAIS
    ======================================== */
@@ -21,7 +28,7 @@ body {
 }
 
 .header {
-    background-color: #333;
+    background-color: var(--primary-color, #333);
     color: #fff;
 
     /* Fixar no topo */

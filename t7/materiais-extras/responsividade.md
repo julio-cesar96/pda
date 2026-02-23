@@ -1,30 +1,3 @@
-
-Conversa aberta. 1 mensagem não lida.
-
-Pular para o conteúdo
-Como usar o Gmail com leitores de tela
-4 de 20.013
-Guia da aula de hoje - PDA
-Caixa de entrada
-Resumir este e-mail
-
-Júlio César Brito da Silva <juliobritods.96@gmail.com>
-Anexos
-16:05 (há 3 horas)
-para mim
-
-
-
---
-Photo	Júlio César Brito
-Educator and Front End Developer
-mobile-icon	+55 21 97434 4151
-phone-icon	juliobritds.96@gmail.com		mobile-icon	github.com/julio-cesar96
-linkedin icon 
-
- 1 anexo
-  •  Verificados pelo Gmail
-
 # Responsividade e Organização de CSS em Projetos Front-End
 
 *Roteiro completo de aula com explicações técnicas, exemplos práticos e projeto aplicado*

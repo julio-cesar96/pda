@@ -1102,7 +1102,7 @@ Com base em tudo que foi visto na aula, sua missão é entregar os seguintes req
 
 ### 🔗 O que vem na A2
 
-Na próxima aula, os cards ganham vida. Você vai aprender a criar filtros reativos com **useState**, simular o carregamento de dados com **useEffect**, e otimizar a performance da lista com **useMemo**. A interface vai começar a responder às escolhas do usuário em tempo real.
+Na próxima aula, os cards ganham vida. Você vai aprender a criar filtros reativos com **useState**, simular o carregamento de dados com **useEffect**, e otimizar a performance da lista com **useMemo**. A interface vai começar a responder às escolhas do usuário em tempo real com facilidade.
 
 ---
 

@@ -1,3 +1,4 @@
+// teste
 import { z } from "zod";
 
 import * as readline from "readline";

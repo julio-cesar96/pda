@@ -334,13 +334,13 @@ Os critérios abaixo são **eliminatórios** e podem zerar a nota das demais tec
 - **Façam as contas no papel antes do código.** Se o SQUAD não sabe calcular o pedido de exemplo à mão, o código também não vai saber.
 - **Usem o pedido de exemplo como teste** sempre que mexerem nas regras de cupom, frete ou comissão.
 - **Dividam por classe**, não por "quem sabe mais". Cada pessoa fica dona de uma parte e explica essa parte na apresentação.
-- **Commit pequeno e frequente.** Um commit por funcionalidade que funciona. Nunca deixem para subir tudo no último dia.
+- **[Commit pequeno e frequente](https://www-conventionalcommits-org.translate.goog/en/v1.0.0/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc).** Um commit por funcionalidade que funciona. Nunca deixem para subir tudo no último dia.
 - **O prazo é curto, então corte o que não é obrigatório.** Primeiro tudo o que está nos Requisitos, funcionando. Só depois pensem nos extras 🔵.
 - **Travou?** Leiam a mensagem de erro, procurem na documentação e conversem com o SQUAD. Se mesmo assim não sair, peçam ajuda mostrando o que já tentaram.
 
 ## 📦 Entrega
 
-- **Link do repositório do GitHub do SQUAD**, com o professor adicionado como colaborador.
+- **Link do repositório do GitHub do SQUAD**, com o professor adicionado (julio-cesar96) e o Léo (LeonardoCAlves) como colaborador.
 - **Link do post no LinkedIn.**
 - **Data de entrega:** 28/10/2026 (quarta-feira)
 

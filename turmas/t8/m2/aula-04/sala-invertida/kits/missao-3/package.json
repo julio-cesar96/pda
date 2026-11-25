@@ -1,0 +1,19 @@
+{
+  "name": "kit-missao-3",
+  "version": "1.0.0",
+  "description": "Missão 3: middleware de log e variáveis de ambiente",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

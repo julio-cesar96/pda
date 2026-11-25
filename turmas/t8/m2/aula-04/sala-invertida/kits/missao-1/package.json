@@ -1,0 +1,19 @@
+{
+  "name": "kit-missao-1",
+  "version": "1.0.0",
+  "description": "Missão 1: express.Router e controllers",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "antes": "node antes-tudo-junto.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
